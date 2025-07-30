@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vaibhav Baghele | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #0a0a0a;
+        color: #fff;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px;
+        background: #111;
+      }
+
+      .hero-text {
+        max-width: 600px;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .highlight {
+        color: #00adb5;
+      }
+
+      .hero-text h2 {
+        font-size: 2rem;
+        margin: 10px 0;
+        color: #00adb5;
+      }
+
+      .hero-text p {
+        color: #ccc;
+        margin-bottom: 20px;
+      }
+
+      .buttons .btn {
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        margin: 10px 10px 10px 0;
+        display: inline-block;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .btn.blue {
+        background-color: #00adb5;
+        color: white;
+      }
+
+      .btn.white {
+        background-color: white;
+        color: #111;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        color: white;
+        margin: 10px;
+        font-size: 1.5rem;
+        transition: 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #00adb5;
+      }
+
+      .hero-img img {
+        max-width: 350px;
+        border-radius: 15px;
+      }
+
+      /* About Section */
+      .about {
+        padding: 60px;
+        background: #1a1a1a;
+        text-align: left;
+      }
+
+      .about-text {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #00adb5;
+      }
+
+      .about-text p {
+        margin-bottom: 20px;
+        color: #ddd;
+      }
+
+      .skills p {
+        margin: 10px 0 5px;
+      }
+
+      .bar {
+        background: #333;
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .fill {
+        background: #00adb5;
+        height: 100%;
+      }
+
+      /* Contact Section Toggle */
+      .contact-panel {
+        display: none;
+        background-color: #101010;
+        padding: 40px 20px;
+        text-align: center;
+        animation: fadeIn 0.5s ease-in-out;
+        border-top: 2px solid #00adb5;
+      }
+
+      .contact-panel.active {
+        display: block;
+      }
+
+      .contact-panel h2 {
+        color: #00adb5;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+
+      .contact-details {
+        font-size: 1.1rem;
+        color: #ddd;
+        margin-bottom: 15px;
+      }
+
+      .contact-details i {
+        margin-right: 10px;
+        color: #00adb5;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero,
+        .about {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .hero-img img {
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="highlight">Vaibhav Baghele</span></h1>
+        <h2><span class="typing"></span></h2>
+        <p>
+          Frontend Developer (HTML, CSS, JS, React) | Skilled in Machine
+          Learning & AI
+        </p>
+        <div class="buttons">
+          <a href="#about" class="btn blue">My Work</a>
+          <span class="btn white" onclick="toggleContact()">Hire Me</span>
+        </div>
+        <div class="social-icons">
+          <a
+            style="text-decoration: none"
+            href="https://github.com/vaibhavbaghele76"
+            ><i class="fab fa-github"></i>GitHub</a
+          >
+          <a style="text-decoration: none" href="https://www.linkedin.com/in/vaibhav-baghele-49b211374/"
+            ><i class="fab fa-linkedin"></i>Linkedin</a
+          >
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="Vaibhav.png" alt="Vaibhav" height="310px" width="270px" />
+      </div>
+    </section>
+
+    <!-- Contact Panel -->
+    <div class="contact-panel" id="contact">
+      <h2>📞 Contact Me</h2>
+      <div class="contact-details">
+        <i class="fas fa-envelope"></i> vaibhavbaghele29@gmail.com
+      </div>
+      <div class="contact-details">
+        <i class="fas fa-phone"></i> +91-8007689166
+      </div>
+      <div class="contact-details">
+        <i class="fas fa-map-marker-alt"></i> Kolhapur, Maharashtra, India
+      </div>
+      <br>
+      <a 
+        href="Vaibhav_CV.pdf"
+        download
+        class="btn blue"
+        style="margin-top: 20px;border:5px solid rgb(230, 219, 219);padding: 10px;background-color: blue;border-radius: 30px;"
+          >📄 Download Resume</a
+      >
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hii, I am a B.Tech student with a passion for problem-solving and
+          innovation, pursuing Computer Science and Engineering with a
+          specialization in Artificial Intelligence and Machine Learning.
+          Seeking an internship or entry-level position to gain hands-on
+          experience and apply my skills.
+        </p>
+        <div class="skills">
+          <p>HTML</p>
+          <div class="bar"><div class="fill" style="width: 100%"></div></div>
+          <p>CSS</p>
+          <div class="bar"><div class="fill" style="width: 95%"></div></div>
+          <p>BootStrap</p>
+          <div class="bar"><div class="fill" style="width: 100%"></div></div>
+          <p>JavaScript</p>
+          <div class="bar"><div class="fill" style="width: 100%"></div></div>
+          <p>React.Js</p>
+          <div class="bar"><div class="fill" style="width: 85%"></div></div>
+          <p>Machine Learning</p>
+          <div class="bar"><div class="fill" style="width: 75%"></div></div>
+          <p>Deep Learning</p>
+          <div class="bar"><div class="fill" style="width: 75%"></div></div>
+          <p>C++</p>
+          <div class="bar"><div class="fill" style="width: 90%"></div></div>
+          <p>Core Java</p>
+          <div class="bar"><div class="fill" style="width: 70%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typing Effect Script -->
+    <script>
+      const roles = ["An Aspiring Web Developer", "an ML Enthusiast"];
+      let i = 0,
+        j = 0,
+        current = "",
+        isDeleting = false;
+
+      function type() {
+        if (i < roles.length) {
+          if (!isDeleting && j <= roles[i].length) {
+            current = roles[i].substring(0, j++);
+            document.querySelector(".typing").textContent = current;
+            setTimeout(type, 100);
+          } else if (isDeleting && j >= 0) {
+            current = roles[i].substring(0, j--);
+            document.querySelector(".typing").textContent = current;
+            setTimeout(type, 60);
+          } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) i = (i + 1) % roles.length;
+            setTimeout(type, 1000);
+          }
+        }
+      }
+      type();
+
+      // Contact Panel Toggle
+      function toggleContact() {
+        document.getElementById("contact").classList.toggle("active");
+        window.scrollTo({
+          top: document.getElementById("contact").offsetTop,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
